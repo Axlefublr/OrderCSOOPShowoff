@@ -6,8 +6,9 @@ internal abstract class Address {
    protected string City;
    protected string Street;
    protected int Building;
+   public abstract string ValidAddress { get; }
 
-   protected void CreateAddress(string country, string state, string city, string street, int building)
+   protected Address(string country, string state, string city, string street, int building)
    {
       Country  = country;
       State    = state;
@@ -15,4 +16,22 @@ internal abstract class Address {
       Street   = street;
       Building = building;
    }
+
+}
+
+internal class HomeAddress : Address
+{
+   private int Apartment;
+   private int Floor;
+   public override string ValidAddress {
+      get{
+         return Country + " " + State + " " + City + " " + Street + " " + Building + " " + Apartment + " " + Floor;
+      }
+   }
+   public HomeAddress(string country, string state, string city, string street, int building, int apartment, int floor) : base(country, state, city, street, building)
+   {
+      Apartment = apartment;
+      Floor = floor;
+   }
+
 }
