@@ -1,0 +1,3 @@
+- [x] Add requirements to a markdown file for ease of readability
+- [x] Create a roadmap of tasks to do in the project
+- [ ] Create a method that opens my two youtube channels (optional)
