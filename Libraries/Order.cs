@@ -44,3 +44,7 @@ class Order<TDelivery> where TDelivery : Delivery
       Description = description;
    }
 }
+
+class Product<Tid> where Tid : notnull {
+   private protected Tid Id { get; set; }
+}

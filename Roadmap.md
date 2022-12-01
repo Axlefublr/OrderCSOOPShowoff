@@ -5,3 +5,6 @@
 - [x] Make constructor
 - [x] Address is abstract
 - [x] Override the Address property in each type of delivery
+- [x] Product class
+- [ ] it's id, color, amount and price
+- [ ] AddedItems with a private setter (list of Products)
