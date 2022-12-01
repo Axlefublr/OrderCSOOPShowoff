@@ -3,7 +3,6 @@
 abstract class Delivery
 {
    protected internal abstract string Address { get; set; }
-
 }
 
 class HomeDelivery : Delivery
@@ -72,19 +71,16 @@ class Product<Tid> where Tid : notnull
       get { return Amount * Price; }
    }
 
-   public Product(Tid id, string color, int amount, double price)
-   {
-      Id = id;
-      Color = color;
-      Amount = amount;
-      Price = price;
-   }
    // Amount is 1 by default
    public Product(Tid id, string color, double price)
    {
       Id = id;
       Color = color;
       Price = price;
+   }
+   public Product(Tid id, string color, int amount, double price) : this(id, color, price)
+   {
+      Amount = amount;
    }
 
    public static Product<Tid> operator ++(Product<Tid> a)
