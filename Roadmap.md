@@ -2,4 +2,6 @@
 - [x] Create a roadmap of tasks to do in the project
 - [ ] Create a method that opens my two youtube channels (optional)
 - [x] Change order fields to properties
-- [ ] 
+- [x] Make constructor
+- [x] Address is abstract
+- [x] Override the Address property in each type of delivery

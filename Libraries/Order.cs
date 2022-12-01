@@ -2,22 +2,23 @@
 
 abstract class Delivery
 {
-   public string Address;
+   protected internal abstract string Address { get; set; }
+   
 }
 
 class HomeDelivery : Delivery
 {
-   
+   protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 }
 
 class PickPointDelivery : Delivery
 {
-   
+   protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 }
 
 class ShopDelivery : Delivery
 {
-   
+   protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 }
 
 class Order<TDelivery> where TDelivery : Delivery
@@ -38,8 +39,8 @@ class Order<TDelivery> where TDelivery : Delivery
    }
 
    public Order(TDelivery delivery, int number, string description) {
-      Delivery = delivery;
-      Number = number;
+      Delivery    = delivery;
+      Number      = number;
       Description = description;
    }
 }
