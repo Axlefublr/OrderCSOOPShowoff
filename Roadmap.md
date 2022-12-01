@@ -6,5 +6,7 @@
 - [x] Address is abstract
 - [x] Override the Address property in each type of delivery
 - [x] Product class
-- [ ] it's id, color, amount and price
-- [ ] AddedItems with a private setter (list of Products)
+- [x] it's id, color, amount and price
+- [x] Fullcost property: can only get gotten (essentially a function in disguise)
+- [ ] AddedItems with a private setter in Order (list of Products)
+- [ ] overloads for ++ and -- to product that increases amount

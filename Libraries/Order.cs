@@ -47,4 +47,14 @@ class Order<TDelivery> where TDelivery : Delivery
 
 class Product<Tid> where Tid : notnull {
    private protected Tid Id { get; set; }
+   private protected string Color { get; set; }
+   private protected int Amount { get; set; }
+   private protected double Price { get; set; }
+   public double FullCost {
+      get { return Amount * Price; }
+   }
+   
+   public Product(Tid id, string color, int amount, double price) {
+      throw new NotImplementedException();
+   }
 }
