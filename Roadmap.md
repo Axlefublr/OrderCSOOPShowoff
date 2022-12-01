@@ -13,6 +13,6 @@
 - [x] Move Product to its own file
 - [x] AddedItems: list of products
    - [x] With AddProduct and RemoveProduct methods to aid it
-- [ ] Address abstract class 
+- [x] Address abstract class 
    - [ ] with base location types
    - [ ] in a different file
