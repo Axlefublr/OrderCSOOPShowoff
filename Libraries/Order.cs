@@ -79,6 +79,13 @@ class Product<Tid> where Tid : notnull
       Amount = amount;
       Price = price;
    }
+   // Amount is 1 by default
+   public Product(Tid id, string color, double price)
+   {
+      Id = id;
+      Color = color;
+      Price = price;
+   }
 
    public static Product<Tid> operator ++(Product<Tid> a)
    {

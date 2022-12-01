@@ -10,4 +10,4 @@
 - [x] Fullcost property: can only get gotten (essentially a function in disguise)
 - [ ] AddedItems with a private setter in Order (list of Products)
 - [x] Overloads for ++ and -- to product that change amount
-- [ ] Overloads for - and + with numbers that also change amount
+- [x] Overloads for - and + with numbers that also change amount
