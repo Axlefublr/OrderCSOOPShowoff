@@ -60,4 +60,21 @@ class Product<Tid> where Tid : notnull {
       Amount = amount;
       Price  = price;
    }
+
+   public static Product<Tid> operator ++(Product<Tid> a) {
+      a.Amount++;
+      return a;
+   }
+   public static Product<Tid> operator --(Product<Tid> a) {
+      a.Amount--;
+      return a;
+   }
+   public static Product<Tid> operator +(Product<Tid> a, int num) {
+      a.Amount += num;
+      return a;
+   }
+   public static Product<Tid> operator -(Product<Tid> a, int num) {
+      a.Amount -= num;
+      return a;
+   }
 }
