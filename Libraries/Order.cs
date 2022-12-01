@@ -46,10 +46,10 @@ class Order<TDelivery> where TDelivery : Delivery
 }
 
 class Product<Tid> where Tid : notnull {
-   private protected Tid Id { get; set; }
-   private protected string Color { get; set; }
-   private protected int Amount { get; set; }
-   private protected double Price { get; set; }
+   private protected Tid Id;
+   private protected string Color;
+   private protected int Amount;
+   private protected double Price;
    public double FullCost {
       get { return Amount * Price; }
    }
