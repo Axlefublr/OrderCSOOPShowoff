@@ -38,6 +38,8 @@ class Order<TDelivery> where TDelivery : Delivery
    }
 
    public Order(TDelivery delivery, int number, string description) {
-
+      Delivery = delivery;
+      Number = number;
+      Description = description;
    }
 }
