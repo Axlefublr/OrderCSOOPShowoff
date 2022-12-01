@@ -55,6 +55,9 @@ class Product<Tid> where Tid : notnull {
    }
    
    public Product(Tid id, string color, int amount, double price) {
-      throw new NotImplementedException();
+      Id     = id;
+      Color  = color;
+      Amount = amount;
+      Price  = price;
    }
 }
