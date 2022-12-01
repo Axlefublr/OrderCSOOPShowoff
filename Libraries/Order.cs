@@ -1,26 +1,8 @@
 ﻿namespace Libraries;
 
-abstract class Delivery
-{
-   protected internal abstract string Address { get; set; }
-}
-
-class HomeDelivery : Delivery
-{
-   protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-}
-
-class PickPointDelivery : Delivery
-{
-   protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-}
-
-class ShopDelivery : Delivery
-{
-   protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-}
-
-class Order<TDelivery> where TDelivery : Delivery
+public class Order<TDelivery, Tid> 
+   where TDelivery : Delivery 
+   where Tid : notnull
 {
    public TDelivery Delivery
    {
@@ -28,9 +10,9 @@ class Order<TDelivery> where TDelivery : Delivery
       private protected set { }
    }
 
-   public int Number
+   public Tid Id
    {
-      get { return Number; }
+      get { return Id; }
       private protected set { }
    }
 
@@ -40,10 +22,28 @@ class Order<TDelivery> where TDelivery : Delivery
       private protected set { }
    }
 
-   public Order(TDelivery delivery, int number, string description)
+   private List<Product<Tid>> AddedItems = default;
+   
+   public void AddProduct(Product<Tid> product) {
+      if (product is not null)
+         AddedItems.Add(product);
+   }
+   
+   public void RemoveProduct(Product<Tid> product) {
+      if (product is not null)
+         AddedItems.Remove(product);
+   }
+
+   public Order(TDelivery delivery, Tid id, string description)
    {
       Delivery = delivery;
-      Number = number;
+      Id = id;
       Description = description;
+   }
+   
+   public Order(TDelivery delivery, Tid id, string description, params Product<Tid>[] products) : this(delivery, id, description) {
+      foreach (Product<Tid> product in products) {
+         AddedItems.Add(product);
+      }
    }
 }

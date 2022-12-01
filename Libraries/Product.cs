@@ -1,6 +1,6 @@
 namespace Libraries;
 
-class Product<Tid> where Tid : notnull
+public class Product<Tid> where Tid : notnull
 {
    private protected Tid Id;
    private protected string Color;

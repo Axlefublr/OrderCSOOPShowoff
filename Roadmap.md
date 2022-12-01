@@ -10,8 +10,9 @@
 - [x] Fullcost property: can only get gotten (essentially a function in disguise)
 - [x] Overloads for ++ and -- to product that change amount
 - [x] Overloads for - and + with numbers that also change amount
-- [ ] Move Product to its own file
-- [ ] AddedItems with a private setter in Order (list of Products)
+- [x] Move Product to its own file
+- [x] AddedItems: list of products
+   - [x] With AddProduct and RemoveProduct methods to aid it
 - [ ] Address abstract class 
    - [ ] with base location types
    - [ ] in a different file
