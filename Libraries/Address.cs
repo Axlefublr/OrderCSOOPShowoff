@@ -62,18 +62,40 @@ internal class HomeAddress : Address
 
 }
 
-internal class PickPointAddress : Address {
+internal class PickPointAddress : Address
+{
+   private int pickPointPavilion;
+   public int PickPointPavilion
+   {
+      get { return pickPointPavilion; }
+      set
+      {
+         if (value > 0)
+            pickPointPavilion = value;
+      }
+   }
+
+   public PickPointAddress(string country, string state, string city, string street, int building, int pickPointPavilion) : base(country, state, city, street, building)
+   {
+      PickPointPavilion = pickPointPavilion;
+   }
+}
+
+internal class ShopAddress : Address
+{
+
    private int shopPavilion;
    public int ShopPavilion
    {
       get { return shopPavilion; }
-      set { 
+      set
+      {
          if (value > 0)
-            shopPavilion = value; 
+            shopPavilion = value;
       }
    }
-   
-   public PickPointAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building) {
+   public ShopAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building)
+   {
       ShopPavilion = shopPavilion;
    }
 }
