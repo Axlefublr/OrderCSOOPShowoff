@@ -1,20 +1,38 @@
 namespace Libraries;
 
-internal abstract class Delivery
+public abstract class Delivery
 {
+   public readonly DateTime ArrivalTime;
+   public readonly DateTime DepartingTime;
+   public readonly UserPlan UserPlan;
+   internal Delivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan) {
+      ArrivalTime = arrivalTime;
+      DepartingTime = departingTime;
+      UserPlan = userPlan;
+   }
 }
 
-internal class HomeDelivery : Delivery
+public class HomeDelivery : Delivery
 {
-   internal HomeAddress Address { get; set; }
+   internal HomeAddress Address { get; private set; }
+   
+   internal HomeDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, HomeAddress address) : base(arrivalTime, departingTime, userPlan) {
+      Address = address;
+   }
 }
 
-internal class PickPointDelivery : Delivery
+public class PickPointDelivery : Delivery
 {
-   internal PickPointAddress Address { get; set; }
+   internal PickPointAddress Address { get; private set; }
+   internal PickPointDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, PickPointAddress address) : base(arrivalTime, departingTime, userPlan) {
+      Address = address;
+   }
 }
 
-internal class ShopDelivery : Delivery
+public class ShopDelivery : Delivery
 {
-   internal ShopDelivery Address { get; set; }
+   internal ShopAddress Address { get; private set; }
+   internal ShopDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, ShopAddress address) : base(arrivalTime, departingTime, userPlan) {
+      Address = address;
+   }
 }
