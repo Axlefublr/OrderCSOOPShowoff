@@ -16,6 +16,7 @@
 - [x] Address abstract class 
    - [x] with base location types
    - [x] in a different file
+   - [ ] fields that need logic are wrapped properties
    - [ ] each derived class with a constructor
    - [ ] and a "GetAddress" property
    - [ ] make that interact with the delivery classes through using the object (not creating it)
