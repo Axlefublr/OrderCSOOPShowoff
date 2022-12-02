@@ -94,7 +94,7 @@ public class ShopAddress : Address
             shopPavilion = value;
       }
    }
-   
+
    public ShopAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building)
    {
       ShopPavilion = shopPavilion;
