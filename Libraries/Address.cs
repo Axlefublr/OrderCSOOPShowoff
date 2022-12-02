@@ -1,13 +1,13 @@
 namespace Libraries;
 
-internal abstract class Address
+public abstract class Address
 {
-   protected string Country;
-   protected string State;
-   protected string City;
-   protected string Street;
+   public string Country;
+   public string State;
+   public string City;
+   public string Street;
    private int building;
-   protected int Building
+   public int Building
    {
       get { return building; }
       set
@@ -19,7 +19,7 @@ internal abstract class Address
       }
    }
 
-   protected Address(string country, string state, string city, string street, int building)
+   public Address(string country, string state, string city, string street, int building)
    {
       Country = country;
       State = state;
@@ -30,10 +30,10 @@ internal abstract class Address
 
 }
 
-internal class HomeAddress : Address
+public class HomeAddress : Address
 {
    private int apartment;
-   internal int Apartment
+   public int Apartment
    {
       get => apartment;
       set
@@ -44,7 +44,7 @@ internal class HomeAddress : Address
    }
 
    private int floor;
-   internal int Floor
+   public int Floor
    {
       get => floor;
       set
@@ -54,7 +54,7 @@ internal class HomeAddress : Address
       }
    }
 
-   internal HomeAddress(string country, string state, string city, string street, int building, int apartment, int floor) : base(country, state, city, street, building)
+   public HomeAddress(string country, string state, string city, string street, int building, int apartment, int floor) : base(country, state, city, street, building)
    {
       Apartment = apartment;
       Floor = floor;
@@ -62,10 +62,10 @@ internal class HomeAddress : Address
 
 }
 
-internal class PickPointAddress : Address
+public class PickPointAddress : Address
 {
    private int pickPointPavilion;
-   internal int PickPointPavilion
+   public int PickPointPavilion
    {
       get { return pickPointPavilion; }
       set
@@ -75,17 +75,17 @@ internal class PickPointAddress : Address
       }
    }
 
-   internal PickPointAddress(string country, string state, string city, string street, int building, int pickPointPavilion) : base(country, state, city, street, building)
+   public PickPointAddress(string country, string state, string city, string street, int building, int pickPointPavilion) : base(country, state, city, street, building)
    {
       PickPointPavilion = pickPointPavilion;
    }
 }
 
-internal class ShopAddress : Address
+public class ShopAddress : Address
 {
 
    private int shopPavilion;
-   internal int ShopPavilion
+   public int ShopPavilion
    {
       get { return shopPavilion; }
       set
@@ -95,7 +95,7 @@ internal class ShopAddress : Address
       }
    }
    
-   internal ShopAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building)
+   public ShopAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building)
    {
       ShopPavilion = shopPavilion;
    }

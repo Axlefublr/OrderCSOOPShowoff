@@ -14,8 +14,8 @@ public abstract class Delivery
 
 public class HomeDelivery : Delivery
 {
-   internal HomeAddress Address { get; private set; }
-   
+   public readonly HomeAddress Address;
+
    internal HomeDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, HomeAddress address) : base(arrivalTime, departingTime, userPlan) {
       Address = address;
    }
@@ -23,16 +23,16 @@ public class HomeDelivery : Delivery
 
 public class PickPointDelivery : Delivery
 {
-   internal PickPointAddress Address { get; private set; }
-   internal PickPointDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, PickPointAddress address) : base(arrivalTime, departingTime, userPlan) {
+   public readonly PickPointAddress Address;
+   public PickPointDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, PickPointAddress address) : base(arrivalTime, departingTime, userPlan) {
       Address = address;
    }
 }
 
 public class ShopDelivery : Delivery
 {
-   internal ShopAddress Address { get; private set; }
-   internal ShopDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, ShopAddress address) : base(arrivalTime, departingTime, userPlan) {
+   public readonly ShopAddress Address;
+   public ShopDelivery(DateTime arrivalTime, DateTime departingTime, UserPlan userPlan, ShopAddress address) : base(arrivalTime, departingTime, userPlan) {
       Address = address;
    }
 }

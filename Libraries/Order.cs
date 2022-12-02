@@ -15,7 +15,12 @@ public class Order<TDelivery, Tid>
    public string Description { get; set; } //Description of the order can change as well, without needing to create another separate order
 
    private List<Product<Tid>> AddedItems = default;
-   
+   public Product<Tid> this[int product] {
+      get{
+         return AddedItems[product];
+      }
+   }
+
    public void AddProduct(Product<Tid> product) {
       if (product is not null)
          AddedItems.Add(product);

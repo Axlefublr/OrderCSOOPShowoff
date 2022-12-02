@@ -18,5 +18,5 @@
    - [x] in a different file
    - [x] fields that need logic are wrapped properties
    - [x] each derived class with a constructor
-- [ ] Delivery classes use the Address type of their respective class
-- [ ] Indexes for AddedItems in Order
+- [x] Delivery classes use the Address type of their respective class
+- [x] Indexes for AddedItems in Order
