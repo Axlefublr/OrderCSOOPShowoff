@@ -4,23 +4,15 @@ public class Order<TDelivery, Tid>
    where TDelivery : Delivery 
    where Tid : notnull
 {
-   public TDelivery Delivery
-   {
-      get { return Delivery; }
-      private protected set { }
-   }
+   public TDelivery Delivery { get; set; } //User can change their delivery specifics after creating the order
 
    public Tid Id
    {
       get { return Id; }
-      private protected set { }
+      private set { } //Once you create an order, there's no situation where you'd change the id
    }
 
-   public string Description
-   {
-      get { return Description; }
-      private protected set { }
-   }
+   public string Description { get; set; } //Description of the order can change as well, without needing to create another separate order
 
    private List<Product<Tid>> AddedItems = default;
    

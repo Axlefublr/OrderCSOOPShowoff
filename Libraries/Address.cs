@@ -95,6 +95,7 @@ internal class ShopAddress : Address
       }
    }
    
+   public ShopAddress() {}
    public ShopAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building)
    {
       ShopPavilion = shopPavilion;
