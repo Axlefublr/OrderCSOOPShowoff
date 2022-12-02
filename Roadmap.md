@@ -19,4 +19,4 @@
    - [x] fields that need logic are wrapped properties
    - [x] each derived class with a constructor
 - [ ] Delivery classes use the Address type of their respective class
-- [ ] Indexes for products in Order
+- [ ] Indexes for AddedItems in Order

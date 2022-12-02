@@ -1,21 +1,21 @@
 namespace Libraries;
 
-public abstract class Delivery
+internal abstract class Delivery
 {
    protected internal abstract string Address { get; set; }
 }
 
-public class HomeDelivery : Delivery
+internal class HomeDelivery : Delivery
 {
    protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 }
 
-public class PickPointDelivery : Delivery
+internal class PickPointDelivery : Delivery
 {
    protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 }
 
-public class ShopDelivery : Delivery
+internal class ShopDelivery : Delivery
 {
    protected internal override string Address { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 }
