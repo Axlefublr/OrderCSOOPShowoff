@@ -6,17 +6,17 @@
 - [x] Address is abstract
 - [x] Override the Address property in each type of delivery
 - [x] Product class
-- [x] it's id, color, amount and price
-- [x] Fullcost property: can only get gotten (essentially a function in disguise)
-- [x] Overloads for ++ and -- to product that change amount
-- [x] Overloads for - and + with numbers that also change amount
-- [x] Move Product to its own file
+   - [x] it's id, color, amount and price
+   - [x] Fullcost property: can only get gotten (essentially a function in disguise)
+   - [x] Overloads for ++ and -- to product that change amount
+   - [x] Overloads for - and + with numbers that also change amount
+   - [x] Move Product to its own file
 - [x] AddedItems: list of products
    - [x] with AddProduct and RemoveProduct methods to aid it
 - [x] Address abstract class 
    - [x] with base location types
    - [x] in a different file
-   - [ ] fields that need logic are wrapped properties
-   - [ ] each derived class with a constructor
-   - [ ] and a "GetAddress" property
-   - [ ] make that interact with the delivery classes through using the object (not creating it)
+   - [x] fields that need logic are wrapped properties
+   - [x] each derived class with a constructor
+- [ ] Delivery classes use the Address type of their respective class
+- [ ] Indexes for products in Order
