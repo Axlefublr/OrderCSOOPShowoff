@@ -12,7 +12,10 @@
 - [x] Overloads for - and + with numbers that also change amount
 - [x] Move Product to its own file
 - [x] AddedItems: list of products
-   - [x] With AddProduct and RemoveProduct methods to aid it
+   - [x] with AddProduct and RemoveProduct methods to aid it
 - [x] Address abstract class 
-   - [ ] with base location types
-   - [ ] in a different file
+   - [x] with base location types
+   - [x] in a different file
+   - [ ] each derived class with a constructor
+   - [ ] and a "GetAddress" property
+   - [ ] make that interact with the delivery classes through using the object (not creating it)

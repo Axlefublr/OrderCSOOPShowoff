@@ -3,3 +3,5 @@ Shouldn't most setters be private protected? You set stuff when you create the o
 I guess you should leave them available sometimes, if say the user decides to change their address
 
 Addresses will be different depending on the type of the delivery, so the Address property should be abstract
+
+No actually an address complier is a stupid idea, even for laughs
