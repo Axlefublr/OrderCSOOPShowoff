@@ -33,7 +33,7 @@ internal abstract class Address
 internal class HomeAddress : Address
 {
    private int apartment;
-   public int Apartment
+   internal int Apartment
    {
       get => apartment;
       set
@@ -44,7 +44,7 @@ internal class HomeAddress : Address
    }
 
    private int floor;
-   public int Floor
+   internal int Floor
    {
       get => floor;
       set
@@ -54,7 +54,7 @@ internal class HomeAddress : Address
       }
    }
 
-   public HomeAddress(string country, string state, string city, string street, int building, int apartment, int floor) : base(country, state, city, street, building)
+   internal HomeAddress(string country, string state, string city, string street, int building, int apartment, int floor) : base(country, state, city, street, building)
    {
       Apartment = apartment;
       Floor = floor;
@@ -65,7 +65,7 @@ internal class HomeAddress : Address
 internal class PickPointAddress : Address
 {
    private int pickPointPavilion;
-   public int PickPointPavilion
+   internal int PickPointPavilion
    {
       get { return pickPointPavilion; }
       set
@@ -75,7 +75,7 @@ internal class PickPointAddress : Address
       }
    }
 
-   public PickPointAddress(string country, string state, string city, string street, int building, int pickPointPavilion) : base(country, state, city, street, building)
+   internal PickPointAddress(string country, string state, string city, string street, int building, int pickPointPavilion) : base(country, state, city, street, building)
    {
       PickPointPavilion = pickPointPavilion;
    }
@@ -85,7 +85,7 @@ internal class ShopAddress : Address
 {
 
    private int shopPavilion;
-   public int ShopPavilion
+   internal int ShopPavilion
    {
       get { return shopPavilion; }
       set
@@ -95,7 +95,7 @@ internal class ShopAddress : Address
       }
    }
    
-   public ShopAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building)
+   internal ShopAddress(string country, string state, string city, string street, int building, int shopPavilion) : base(country, state, city, street, building)
    {
       ShopPavilion = shopPavilion;
    }

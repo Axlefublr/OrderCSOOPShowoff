@@ -2,7 +2,7 @@ namespace Libraries;
 
 internal abstract class Delivery
 {
-   protected internal abstract string Address { get; set; }
+   internal abstract Address Address { get; set; }
 }
 
 internal class HomeDelivery : Delivery
